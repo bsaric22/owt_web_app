@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="hr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Detalji</title>
+        <meta name="Author" content="Boris Šarić">
+        <meta name="Date" content="1.4.2025.godine">
+        <meta name="Description" content="Stranica detalja">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Theme" content="Web aplikacija za prikaz alata umjetne inteligencije (AI)">
+        <link rel="stylesheet" type="text/css" href="../css/bsaric22.css">
+        <link rel="stylesheet" type="text/css" href="../css/bsaric22_responzivan.css">
+    </head>
+    <body>
+        <header class="zaglavlje">
+            <figure class="logo_zaglavlje">
+                <a href="/">
+                    <img id="logotip" src="../resursi/slike/LOGOTIP.png" alt="Logo">
+                </a>         
+            </figure>
+        <nav class="navigacija-detalji">
+            <a href="/"> Početna</a>
+            <a href="/dokumentacija"> Dokumentacija</a>
+            <a href="/blog"> Blog</a>
+            <a class="/trenutna" href="#"> Plaćanje</a>
+            <a href="/oAutoru"> O autoru</a>
+        </nav>
+        </header>
+        <main>
+        <div class="sadrzaj-stranice">
+          <h1>Ovo je stranica za plaćanje</h1>
+          <div id="placanjeO" class="obrazacPlacanje" >
+            <h2>Obrazac za plaćanje usluge</h2>
+            <form action="https://spider.foi.hr/OWT/materijali/ispis_forme.php" method="POST">
+              
+              <div class="form-row">
+                <div class="form-left">
+                  <label for="ime">Ime i prezime:</label>
+                  <input type="text" id="ime" name="Ime" required placeholder="Iva Ivić">
+          
+                  <label for="email">Email adresa:</label>
+                  <input type="email" id="email" name="Email" required placeholder="example@foi.hr">
+          
+                  <label for="telefon">Broj telefona:</label>
+                  <input type="tel" id="telefon" name="Telefon" required placeholder="+38591...">
+          
+                  <label for="adresa">Adresa:</label>
+                  <input type="text" id="adresa" name="Adresa" required>
+          
+                  <label for="grad">Grad:</label>
+                  <input type="text" id="grad" name="Grad" required>
+          
+                  <label for="postanski">Poštanski broj:</label>
+                  <input type="number" id="postanski" name="Postanski" required>
+          
+                  <label for="datum">Datum i vrijeme plaćanja:</label>
+                  <input type="datetime-local" id="datum" name="datum" required>
+                </div>
+                <div class="form-right">
+                  <label for="usluga">Odaberi paket:</label>
+                  <select id="usluga" name="usluga" required>
+                    <option value="" disabled selected>-Odaberi-</option>
+                    <option value="basic">Basic - 200€</option>
+                    <option value="pro">Pro - 400€</option>
+                    <option value="expert">Expert - 800€</option>
+                  </select>
+          
+                  <label for="placanje">Način plaćanja:</label>
+                  <select id="placanje" name="Placanje" required>
+                    <option value="" disabled selected>-Odaberi-</option>
+                    <option value="kartica">Kartica</option>
+                    <option value="gotovina">Gotovina</option>
+                    <option value="uplata">Uplata na račun</option>
+                  </select>
+          
+                  <label for="kartica">Broj kartice:</label>
+                  <input type="text" id="kartica" name="kartica" required pattern="[0-9]{16}" placeholder="1234123412341234">
+          
+                  <fieldset>
+                    <legend>Odaberi alat:</legend>
+                    <label><input type="radio" name="alat" value="chatgpt" required> ChatGPT</label><br>
+                    <label><input type="radio" name="alat" value="gemini"> Gemini</label><br>
+                    <label><input type="radio" name="alat" value="perplexity"> Perplexity</label>
+                  </fieldset>
+          
+                  <label>Teme interesa:</label>
+                  <div class="checkbox-group">
+                    <label><input type="checkbox" name="dodaci[]" value="umjetna inteligencija"> Umjetna inteligencija</label>
+                    <label><input type="checkbox" name="dodaci[]" value="strojno ucenje"> Strojno učenje</label>
+                    <label><input type="checkbox" name="dodaci[]" value="web"> Web</label>
+                    <label><input type="checkbox" name="dodaci[]" value="mreze racunala"> Mreže računala</label>
+                  </div>
+          
+                  <label for="fakultet">Fakultet:</label>
+                  <select id="fakultet" name="fakultet" required>
+                    <option value="" disabled selected>-Odaberi-</option>
+                    <option value="FOI">Fakultet organizacije i informatike</option>
+                    <option value="FER">Fakultet elektrotehnike i računarstva</option>
+                    <option value="FSB">Fakultet strojarstva i brodogradnje</option>
+                    <option value="FIL">Filozofski fakultet</option>
+                  </select>
+          
+                  <label for="ocjena">Ocijeni korisničko iskustvo (1-5):</label>
+                  <input type="range" id="ocjena" name="ocjena" min="1" max="5">
+          
+                  <label for="napomena">Napomena:</label>
+                  <textarea id="napomena" name="napomena" rows="4" cols="30"></textarea>
+          
+                  <label><input type="checkbox" name="uvjeti" value="da" required> Prihvaćam uvjete</label>
+                </div>
+              </div>
+          
+              <div class="button-group">
+                <input type="submit" value="Pošalji">
+                <input type="reset" value="Poništi">
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </main>
+      <footer class="podnozje">
+        <div>
+          &copy; Boris Šarić 2025;
+          <a id="linkVerifikacija" href="http://validator.w3.org/check?uri=https://spider.foi.hr/OWT/2025/zadaca_01/bsaric22/html/placanje.html">
+            <img id="logoHTML" src="../resursi/slike/html-5.png" alt="html-5">
+          </a>
+            </div>
+      </footer>
+    </body>
+</html>

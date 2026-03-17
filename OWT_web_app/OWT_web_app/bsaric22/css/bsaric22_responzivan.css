@@ -1,0 +1,371 @@
+@media screen and (max-width: 1024px) {
+    header.zaglavlje,
+    header.zaglavlje-autor {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo_zaglavlje img {
+        width: 120px;
+        height: auto;
+    }
+
+    nav.navigacija,
+    nav.navigacija-detalji,
+    nav.navigacija-autor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 10px 0;
+        font-size: 18px;
+    }
+
+    .blok-paragraf {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .blok-paragraf img {
+        width: 80%;
+        height: auto;
+        margin-top: 10px;
+    }
+    .klizac{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .carosell {
+        background-color: #1e253b;
+        width: 550px;
+        height: 350px;
+        text-align: center;
+        position:relative;
+        border-radius: 20px;
+        display: block;
+        align-items: center;
+        justify-content: center;
+      }
+    .slide{
+        height: 300px;
+    }
+    
+    .slide div {
+        display: none;
+        color: rgb(255, 255, 255);
+        position: relative;
+        height: 100%;
+        font-family: monospace;
+        font-size: 34px;
+        font-weight: bold;
+    }
+    .slide div p{
+        color: white;
+    }
+    .button-link {
+        display: inline-block;
+        padding: 8px 15px;
+        background-color: orange;
+        color: white;
+        text-decoration: none;
+        border: none;
+        border-radius:5px; 
+    }
+    .button-link:hover {
+        background-color: #0056b3;
+    }
+    img{
+        height: 125px;
+    
+    }
+    .carosell .nav label {
+        background: #ffffff;
+        border-radius: 50%;
+        padding: 6px 12px;
+        cursor: pointer;
+        position: absolute;
+        top: 40%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+      
+    .carosell .nav label:hover {
+        background: #aac9ca;
+    }
+      
+      
+    .carosell .nav label:first-child,
+    .carosell .nav label:nth-child(3),
+    .carosell .nav label:nth-child(5) {
+        left: 0;
+    }
+      
+    .carosell .nav label:nth-child(2),
+    .carosell .nav label:nth-child(4),
+    .carosell .nav label:nth-child(6) {
+       right: 0;
+    }
+      
+    
+    #s1:checked ~ .slide div:nth-child(1),
+    #s2:checked ~ .slide div:nth-child(2),
+    #s3:checked ~ .slide div:nth-child(3) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+      
+      
+    .carosell .nav label {
+      display: none;
+    }
+      
+    #s1:checked ~ .nav label:nth-child(-n+2),
+    #s2:checked ~ .nav label:nth-child(3),
+    #s2:checked ~ .nav label:nth-child(4),
+    #s3:checked ~ .nav label:nth-child(5),
+    #s3:checked ~ .nav label:nth-child(6) {
+       display: inline-block;
+    }
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
+      }
+      
+      .blog-box {
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      }
+      
+      .blog-box img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+      
+      .blog-box h3 {
+        margin-top: 10px;
+        color: #333;
+      }
+      
+      .blog-box p {
+         color: #555;
+      }
+      
+      .blog-box input[type="checkbox"] {
+        display: none;
+      }
+      
+      .blog-box label {
+        display: inline-block;
+        margin-top: 10px;
+        color: #007BFF;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      
+      .blog-box .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+      }
+      
+      
+      #toggle1:checked ~ .content,
+      #toggle2:checked ~ .content,
+      #toggle3:checked ~ .content,
+      #toggle4:checked ~ .content {
+        max-height: 1000px;
+        margin-top: 10px;
+      }
+      .forma-dodatno form {
+        background: #d9e2ec;
+        padding: 20px;
+        border-radius: 8px;
+        max-width: 600px;
+        margin: auto;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        margin-bottom: 40px;
+      }
+      
+      .forma-dodatno label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+      }
+      
+      .forma-dodatno input[type="text"],
+      .forma-dodatno input[type="email"],
+      .forma-dodatno input[type="url"],
+      .forma-dodatno textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
+      
+      .forma-dodatno textarea {
+        resize: vertical;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .forma-dodatno input[type="submit"],
+      .forma-dodatno input[type="reset"] {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        background: #007BFF;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .forma-dodatno input[type="reset"] {
+        background: #6c757d;
+        margin-left: 10px;
+      }
+      
+      .forma-dodatno input[type="submit"]:hover,
+      .forma-dodatno input[type="reset"]:hover {
+        opacity: 0.9;
+      }
+
+    .sekcije section {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 14px;
+        overflow-x: auto;
+        display: block;
+    }
+
+    .iframe-container iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    #galerija {
+        display: block;
+        flex-direction: column;
+    }
+
+    #galerija img {
+        width: 100%;
+        height: auto;
+    }
+
+    .informacijeAutor {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .informacijeAutor img {
+        width: 200px;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .podnozje,
+    .podnozje-autor {
+        text-align: center;
+        padding: 10px;
+    }
+    .obrazacPlacanje form,
+    .forma-dodatno form {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .form-row {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-left,
+    .form-right {
+        width: 100%;
+    }
+
+    .form-left label,
+    .form-right label,
+    .form-left input,
+    .form-right input,
+    .form-right select,
+    .form-right textarea,
+    .form-right fieldset {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .checkbox-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media print {
+    header {
+        display: none;
+    }
+
+    nav,
+    .podnozje,
+    .podnozje-autor {
+        display: none;
+    }
+
+    .uvodniTekst,
+    .sekcije,
+    #galerija,
+    .blok-paragraf,
+    .tablica-cpp,
+    .pitanja {
+        width: 100%;
+        font-size: 12pt;
+    }
+}
+@media screen and (max-width: 800px) {
+    th, td {
+        display: none;
+    }
+
+    th:nth-child(-n+2), td:nth-child(-n+2) {
+        display: table-cell;
+    }
+
+    th, td {
+        padding: 8px;
+        border: 1px solid #ddd;
+    }
+
+    td{
+        background-color: #f2f2f2;
+    }
+
+    th{
+        background-color: lightgray;
+    }
+}
